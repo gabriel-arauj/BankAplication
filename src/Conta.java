@@ -12,9 +12,13 @@ public class Conta {
 	public float getSaldo() {
 		return saldo;
 	}
+	public Pessoa getPessoa(){
+		return p;
+	}
+	
 	public void getExtrato(){
 		String extrato = "Nome: " + p.getNome() + " Conta: " + getNumero() + "\n" + texto;
-		System.out.println(extrato + "\nSaldo = "+ getSaldo()); 
+		System.out.println(extrato + "\nSaldo = "+ getSaldo() + "\n\n"); 
 	}
 	public void Debito(float n){
 		saldo -= n;
