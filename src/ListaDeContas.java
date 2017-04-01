@@ -19,15 +19,16 @@ public class ListaDeContas {
 		}else
 			return prox.procucar(id);
 	}
-	public ListaDeContas remover(Conta c){
+	public void remover(int num){
 		if(c == null)
-			return null;
-		if(this.c == c){
+			return;
+		if(this.c.getNumero() == num){
 			this.c = prox.c;
 			prox = prox.prox;
-			return prox;
+			return;
 		}else
-			return prox.remover(c);
+			prox.remover(num);
+			return;
 	}
 	public ListaDeContas() {
 		c = null;
